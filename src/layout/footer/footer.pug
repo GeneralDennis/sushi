@@ -1,1 +1,73 @@
-footer.footer FOOTER
+- var items = ['Суши', 'Гунканы', 'Инари', 'Супы', 'Салаты', 'Горячие закуски', 'Десерты', 'Напитки', 'Дополительно']
+
+- var prices = ['До 500 руб.', 'До 1000 руб. (для двоих)', 'До 1500 руб (для двоих - троих)', 'До 2000 руб (большая кампания)', 'от 2000 руб (очень большая кампания)']
+
+- var details = ['С угрем', 'Горячие', 'Запеченые', 'Суши']
+
+- var rolls = ['Традиционные/Классические', 'Простые', 'Теплые', 'Запеченые', 'Вегитарианские']
+
+- var woks = ['Яичная', 'Удон', 'Гречневая', 'Стеклянная', 'Рис']
+
+- var pizzas = ['Мясная', 'Рыбная', 'Сырная', 'Вегитарианская']
+
+
+footer.footer
+  .container
+    .footer__top
+      .footer__block
+        h4.footer__block-title.footer__block-title--hide
+          | Меню
+        .footer__block-inner
+          ul.footer__block-list
+            each item in items
+              li.footer__block-item
+                a(href="")=item
+      .footer__block
+        h4.footer__block-title
+          | Сеты
+        .footer__block-inner
+          .footer__block-flex
+            .footer__block-l
+              ul.footer__block-list
+                each price in prices
+                  li.footer__block-item=price
+            .footer__block-r
+              ul.footer__block-list
+                each detail in details
+                  li.footer__block-item=detail
+
+      .footer__block
+        h4.footer__block-title
+          | Роллы
+        .footer__block-inner
+          ul.footer__block-list
+            each roll in rolls
+              li.footer__block-item=roll
+      .footer__block
+        h4.footer__block-title
+          | Вок
+        .footer__block-inner
+          ul.footer__block-list
+            each wok in woks
+              li.footer__block-item=wok
+      .footer__block
+        h4.footer__block-title
+          | Пицца
+        .footer__block-inner
+          ul.footer__block-list
+            each pizza in pizzas
+              li.footer__block-item=pizza
+
+    .footer__bottom
+      .footer__bottom-text
+        a(href="/").footer__copyright
+          | МИЮШИ © 2017
+        a(href="#").footer__policy
+          | Соглашение на обработку персональных данных
+      .footer__social
+        a(href="#")
+          img(src="images/instagram.png", alt="insta")
+        a(href="#")
+          img(src="images/vk.png", alt="vk")
+        a(href="#")
+          img(src="images/facebook.png", alt="fb")

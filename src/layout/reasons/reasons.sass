@@ -1,0 +1,61 @@
+.reasons
+  padding: 102px 0 0
+
+.reasons-cards
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  grid-template-rows: repeat(2, 1fr)
+  grid-gap: 40px
+  padding: 70px 0
+  transition: height .5s
+  +max-w(980)
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+  +max-w(720)
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(4, 1fr)
+  +max-w(600)
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(5, 1fr)
+  +max-w(480)
+    height: 560px
+    grid-template-columns: repeat(1, 1fr)
+    overflow: hidden
+  &--show
+    height: auto
+
+.reasons-card
+  display: flex
+  align-items: center
+  justify-content: start
+  flex-direction: column
+
+.reasons-card__text
+  padding-top: 30px
+  font-size: 16px
+  font-weight: 400
+  color: #4d4d4d
+  text-align: center
+
+.reasons__show-more
+  display: none
+  padding: 15px 0
+  width: 100%
+  color: $color-orange
+  border: 1px solid $color-orange
+  text-transform: uppercase
+  text-align: center
+  font-size: 14px
+  font-weight: 400
+  border-radius: 5px
+  cursor: pointer
+  transition: background .3s, color .3s
+  &:hover
+    background: $color-orange
+    color: #fff
+
+  +max-w(480)
+    display: block
+
+  &--hide
+    display: none

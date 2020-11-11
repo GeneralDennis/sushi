@@ -2,3 +2,211 @@
   flex-grow: 0
   flex-shrink: 0
   flex-basis: auto
+  padding: 75px 0 55px
+  background:  #1a2d34
+  +max-w(735)
+    padding-top: 0
+
+    .container
+      padding: 0
+
+.footer__top
+  display: grid
+  grid-template-columns: repeat( 5, 1fr )
+  grid-column-gap: 40px
+  +max-w(735)
+    grid-template-columns: 1fr
+    grid-column-gap: 0
+
+.footer__top-items
+  display: flex
+  flex-direction: column
+  font-size: 14px
+  line-height: 24px
+  a
+    color: #fff
+    transition: color 0.3s ease
+    width: fit-content
+    text-decoration: none
+    &:hover
+      color: $color-greyblue
+      &::after
+        width: 100%
+        opacity: 1
+        background: $color-greyblue
+    &::after
+      display: block
+      content: ''
+      height: 1px
+      width: 0
+      opacity: 0
+      background: #fff
+      transition: background .4s, opacity .4s, width .5s
+  +max-w(735)
+    width: 100%
+    display: none
+    a
+      width: 100%
+  .footer__block-title
+    display: none
+    +max-w(735)
+      display: flex
+
+.footer__block
+
+.footer__block-inner
+  display: block
+  +max-w(735)
+    display: none
+    border-bottom: 1px solid #20353d
+
+.footer__block-title
+  padding-bottom: 22px
+  font-size: 14px
+  font-weight: 400
+  color: #fff
+  +max-w(735)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 26px 15px
+    border-bottom: 1px solid #20353d
+    font-size: 16px
+    &::after
+      display: block
+      content: ''
+      height: 11px
+      width: 20px
+      background: url('./arrow.png') 50% 50% no-repeat
+      transition: transform .3s ease
+  &--hide
+    display: none
+    +max-w(735)
+      display: flex
+  &--open
+    &::after
+      transform: rotate(180deg)
+
+.footer__block-item
+  font-size: 12px
+  line-height: 24px
+  width: fit-content
+  color: $color-greyblue
+  transition: color 0.3s ease
+  cursor: pointer
+  &:hover
+    color: #fff
+    &::after
+      width: 100%
+      opacity: 1
+      background: #fff
+  &::after
+    display: block
+    content: ''
+    height: 1px
+    width: 0
+    opacity: 0
+    background: $color-greyblue
+    transition: background .4s, opacity .4s, width .5s
+  a
+    color: #fff
+    transition: color 0.3s ease
+    width: fit-content
+    text-decoration: none
+    font-size: 14px
+    line-height: 24px
+    &:hover
+      color: $color-greyblue
+      &::after
+        width: 100%
+        opacity: 1
+        background: $color-greyblue
+    &::after
+      display: block
+      content: ''
+      height: 1px
+      width: 0
+      opacity: 0
+      background: #fff
+      transition: background .4s, opacity .4s, width .5s
+
+  +max-w(735)
+    padding: 15px 15px 7px
+
+.footer__block-r
+  padding-left: 30px
+  +max-w(735)
+    width: 100%
+    padding-left: 0
+
+.footer__block-l
+  width: 195px
+  +max-w(735)
+    width: 100%
+
+.footer__block-flex
+  display: flex
+  +max-w(845)
+    flex-wrap: wrap
+    .footer__block-r
+      padding-left: 0
+      order: -1
+
+
+.footer__bottom
+  width: 100%
+  padding-top: 95px
+  display: flex
+  justify-content: space-between
+  +max-w(735)
+    flex-direction: column
+    align-items: center
+    padding-top: 47px
+
+    .footer__bottom-text
+      display: flex
+      flex-direction: column
+      align-items: center
+      .footer__policy
+        order: -1
+        padding-bottom: 41px
+
+    .footer__copyright
+      width: 100%
+      text-align: center
+
+    .footer__social
+      order: -1
+      padding-bottom: 47px
+
+.footer__copyright
+  display: inline-block
+  width: 220px
+  font-size: 12px
+  font-weight: 400
+  text-transform: uppercase
+  color: $color-greyblue
+  cursor: pointer
+  text-decoration: none
+  &:hover
+    color: #fff
+
+.footer__policy
+  font-size: 12px
+  font-weight: 400
+  text-decoration: underline
+  color: $color-greyblue
+  transition: color .3s ease
+  &:hover
+    color: #fff
+
+.footer__social
+  display: flex
+  a
+    display: block
+    transition: opacity .3s ease
+    &:hover
+      opacity: 0.5
+    &:not(:last-child)
+      margin-right: 15px

@@ -1,0 +1,66 @@
+
+mixin card(item, menuTitle)
+
+  .swiper-slide.menu-swiper-slide
+    .card
+      .card__top
+        img.card__img(src=item.img, alt="")
+        div(class ='card__spec card__spec--' + item.spec)
+          p.card__spec-text.card__spec-text--hit
+            | хит
+          p.card__spec-text.card__spec-text--veg
+            | veg
+          img(src="images/fire.png", alt="")
+      .card__content
+        h3.card__title= item.title
+        .card__description
+          if item.size
+            span.card__description-size=item.size
+          else
+          span.card__description-weight=item.weight
+            | &nbsp;г.
+          span.card__description-kalories=item.kalories
+            | &nbsp;Kkal
+        if menuTitle=='WOK'
+          .card-sauce
+            .card-sauce__controls
+              .card-sauce__controls-block
+                | Добавить:
+                .card-sauce__controls-count
+                  | +0
+              .card-sauce__controls-block
+                .card-sauce__controls-total
+                  | 0
+                  span &nbsp;руб.
+                .card-sauce__controls-add
+                  span
+                  span
+            //- .card-sauce__select
+            //-   | Китайский соус
+              //- .card-sauce__select-option
+              //-   | Китайский соус
+              //- .card-sauce__select-option
+              //-   | Китайский соус
+              //- .card-sauce__select-option
+              //-   | Китайский соус
+              //- .card-sauce__select-option
+              //-   | Китайский соус
+        else
+
+        .card__props
+          .card__price=item.price
+            span руб.
+          .quantitier
+            input(type="text")
+            .quantitier-minus
+              span
+            .quantitier-show
+              | 1
+            .quantitier-plus
+              | +
+        .card__add
+          | В корзину
+          img(src="images/cart-white.png", alt="")
+        .card__add.card__added.card__add--hide
+          | В корзине
+          img(src="images/added.svg", alt="")

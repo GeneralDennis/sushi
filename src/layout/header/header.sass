@@ -1,0 +1,261 @@
+.header
+  position: relative
+.container
+  max-width: 1170px
+  width: 100%
+  margin: 0 auto
+  +max-w(1200)
+    padding: 0 15px
+
+  &--drop-menu
+    display: none
+
+.header__container
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +max-w(830)
+    justify-content: center
+
+.header__logo
+  display: block
+  +max-w(970)
+    img
+      max-width: 150px
+      height: auto
+  +max-w(400)
+    height: 46px
+    width: 46px
+    overflow: hidden
+    img
+      max-width: 120px
+
+.header__content
+  padding: 9px 0 20px
+  border-bottom: 1px solid #f2f2f2
+  +max-w(970)
+    padding: 10px 0
+  +max-w(400)
+    padding: 5px 0
+
+.header__details
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 695px
+  +max-w(1180)
+    width: 555px
+  +max-w(830)
+    display: none
+
+.header__burger
+  position: absolute
+  left: 22px
+  top: 38px
+  display: none
+  height: 100%
+  width: auto
+  cursor: pointer
+  +max-w(830)
+    display: block
+  &:hover
+    span
+      background: $color-green
+
+  +max-w(400)
+    top: 21px
+    left: 15px
+
+  span
+    display: block
+    height: 2px
+    width: 20px
+    background: $color-green
+    text-align: left
+    margin-right: 0
+    margin-left: auto
+    &:not(:last-child)
+      margin-bottom: 4px
+
+.header__details-phone, .header__details-work
+  display: block
+  color: #010101
+
+.header__details-phone
+  padding-bottom: 5px
+  font-size: 18px
+  font-weight: 700
+  text-decoration: none
+  transition: opacity .3s
+  &:hover
+    opacity: 0.5
+
+.header__details-work
+  font-size: 10px
+  font-weight: 700
+
+.header__details-address, .header__details-mail
+  display: flex
+  align-items: center
+  font-size: 14px
+  color: $color-text-base
+  font-weight: 400
+  text-decoration: none
+  font-family: $font-family-myriad
+  transition: opacity .3s
+  &:hover
+    opacity: 0.5
+
+  &::before
+    content: ''
+    display: block
+    height: 16px
+    width: 11px
+    margin-right: 9px
+    background: url('./map_marker.png') 50% 50% no-repeat
+
+.header__details-mail
+  &::before
+    height: 9px
+    width: 12px
+    background: url('./envelope.png') 50% 50% no-repeat
+
+.header__callback-btn
+  padding: 11px 19px 13px 18px
+  font-size: 13px
+  font-weight: 700
+  line-height: 14px
+  color: $color-green
+  text-transform: uppercase
+  text-decoration: none
+  border: 1px solid $color-green
+  border-radius: 5px
+  transition: background .3s, color .3s
+  img
+    display: none
+    height: 16px
+    width: 16px
+    object-fit: cover
+
+  &:hover
+    background: $color-green
+    color: $color-background
+  +max-w(970)
+    span
+      display: none
+    img
+      display: block
+  +max-w(830)
+    display: none
+
+.header-menu
+  display: flex
+  justify-content: center
+  width: 100%
+  .js-open-dropmenu
+    position: relative
+    &::after
+      content: ''
+      display: inline-block
+      width: 8px
+      height: 10px
+      margin-left: 10px
+      background: url('./arr_down.png') 50% 50% no-repeat
+      transition: transform .3s
+
+  +max-w(830)
+    display: none
+
+.header-menu__item
+  &--open
+    background: $color-olivegreen
+    color: #fff
+    &:hover
+      background: $color-olivegreen
+      color: #fff
+    &::after
+      transform: rotate(-180deg)
+
+  &--cabinet
+    display: flex
+    img
+      order: -1
+      display: block
+      width: 22px
+      height: 23px
+      margin-right: 18px
+      object-fit: cover
+
+.header-menu__cart
+  display: flex
+  span
+    padding-left: 18px
+.header-menu__cart-img
+  position: relative
+  order: -1
+
+  img
+    display: block
+    width: 22px
+    height: 23px
+    object-fit: cover
+
+.header-menu__cart-count
+  position: absolute
+  top: -1px
+  right: -5px
+  height: auto
+  width: fit-content
+  padding: 2px 3px
+  background-color: $color-orange
+  border-radius: 3px
+  color: #fff
+  font-size: 7px
+  font-weight: 700
+  text-transform: uppercase
+
+
+.header-menu__item, .header-drop__item
+  display: flex
+  align-items: center
+  justify-content: center
+  height: auto
+  width: 100%
+  padding: 19px 10px 17px 10px
+  font-size: 14px
+  line-height: 1
+  font-weight: 700
+  color: $color-text-base
+  text-align: center
+  transition: background .3s, color .3s
+  cursor: pointer
+  &:hover
+    background: $color-olivegreen
+    color: $color-background
+
+.header-drop__menu
+  display: flex
+  flex-wrap: wrap
+
+.header-drop__item
+  color: $color-green
+  width: auto
+  padding: 19px 20px
+
+.header__buyers
+  position: absolute
+  right: 23px
+  top: 35px
+  display: none
+  justify-content: center
+  align-items: center
+  +max-w(830)
+    display: flex
+  +max-w(400)
+    right: 15px
+    top: 18px
+
+.header__buyers-avt
+  padding-right: 30px
+  +max-w(400)
+    padding-right: 15px

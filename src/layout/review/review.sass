@@ -1,0 +1,87 @@
+.review
+  padding: 45px 50px
+  border: 1px solid #e6e6e6
+
+.review__header
+  display: flex
+  align-items: center
+
+.review__avatar
+  height: auto
+  width: auto
+  border-radius: 50%
+  img
+    display: block
+    height: 65px
+    width: 65px
+    object-fit: cover
+
+.review__details
+  padding-left: 18px
+
+.review__details-user
+  font-size: 15px
+  line-height: 21px
+  color: $color-vk
+  font-weight: 700
+
+.review__details-time
+  font-size: 13px
+  line-height: 19px
+  color: #999999
+  font-weight: 400
+
+.review__body
+  padding: 34px 0 30px
+  border-bottom: 1px solid #e6e6e6
+
+.review__body-text
+  max-width: 210px
+  padding-bottom: 26px
+  font-size: 14px
+  line-height: 18px
+  color: #000000
+
+.review__actions
+  display: flex
+  align-items: center
+  padding: 20px 0
+
+.reviews__actions-item
+  display: flex
+  align-items: center
+  height: auto
+  width: fit-content
+  padding-right: 10px
+  img
+    display: block
+    height: 15px
+    width: 18px
+    object-fit: cover
+
+  span
+    display: block
+    padding-left: 7px
+    color: $color-vk
+    font-weight: 700
+    font-size: 14px
+    line-height: 15px
+
+.review__subscribe
+  display: block
+  padding: 10px 0
+  width: 100%
+  text-align: center
+  text-decoration: none
+  font-size: 14px
+  line-height: 18px
+  color: #fff
+  font-weight: 700
+  background: $color-vk
+  &::before
+    content: ''
+    display: inline-block
+    height: 11px
+    width: 16px
+    margin-right: 10px
+    background: url('./vk.png') 50% 50% no-repeat

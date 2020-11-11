@@ -1,0 +1,31 @@
+mixin review(client)
+
+  .review
+    .review__header
+      .review__avatar
+        img(src=client.avatar alt="")
+      .review__details
+        .review__details-user=client.name
+        .review__details-time=client.time
+    .review__body
+      p.review__body-text=client.text
+      if client.img
+        .review__body-img
+          img(src=client.img, alt="")
+    .review__footer
+      .review__actions
+
+        .reviews__actions-item
+          img(src="images/heart.png", alt="")
+          if client.likes > 0
+            span=client.likes
+        .reviews__actions-item
+          img(src="images/sms.png", alt="")
+          if client.messages > 0
+            span=client.messages
+        .reviews__actions-item
+          img(src="images/mphon.png", alt="")
+          if client.subscribes > 0
+            span=client.subscribes
+      a(href="/").review__subscribe
+        | Подписаться

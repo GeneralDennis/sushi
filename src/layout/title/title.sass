@@ -1,0 +1,56 @@
+.title__outer
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: 0 10px
+  &::after, &::before
+    content: ''
+    display: inline-block
+    height: 40px
+    width: 110px
+    +max-w(768)
+      height: 32px
+      width: 86px
+    +max-w(480)
+      height: 27px
+      width: 74px
+    +max-w(350)
+      height: 20px
+      width: 50px
+  &::before
+    background: url('./title-before.png') 50% 50% no-repeat
+    margin-right: 40px
+    background-size: cover
+    +max-w(768)
+      margin-right: 30px
+    +max-w(480)
+      margin-right: 15px
+
+  &::after
+    background: url('./title-after.png') 50% 50% no-repeat
+    margin-left: 40px
+    background-size: cover
+    +max-w(768)
+      margin-left: 30px
+    +max-w(480)
+      margin-left: 15px
+
+.title
+  display: block
+  width: fit-content
+  font-size: 60px
+  font-weight: 400
+  font-family: $font-family-lemon
+  color: $color-title
+  text-align: center
+
+
+  +max-w(768)
+    font-size: 48px
+
+  +max-w(480)
+    font-size: 44px
+
+  +max-w(350)
+    max-width: 150px
+    font-size: 33px

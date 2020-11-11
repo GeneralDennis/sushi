@@ -1,0 +1,21 @@
+include ../title/title
+
+- var items = [{img: 'images/reasons/reason1.png', text: '100% ручная работа'}, {img: 'images/reasons/reason2.png', text: '100% свежие ингредиенты'}, {img: 'images/reasons/reason3.png', text: 'Самые низкие цены на рынке! (Нет ресторанной наценки)'}, {img: 'images/reasons/reason4.png', text: 'Постоянный контроль качества на всех этапах'}, {img: 'images/reasons/reason5.png', text: 'Только охлажденная рыба (никакой заморозки)'}, {img: 'images/reasons/reason6.png', text: 'Мы используем только дорогой рис из Японии'}, {img: 'images/reasons/reason7.png', text: 'Больше начинки, меньше риса!'}, {img: 'images/reasons/reason8.png', text: 'Мы не заменяем авокадо огурцом!'}, {img: 'images/reasons/reason9.png', text: 'Вся пицца готовится из итальянской муки и Итальянского соуса'}, {img: 'images/reasons/reason10.png', text: 'Мы не используем майонез!'}]
+
+mixin card(item)
+  .reasons-card
+    .reasons-card__img
+      img(src=item.img, alt="")
+    p.reasons-card__text=item.text
+
+.reasons
+  +title('10 причин купить у нас')
+  .container
+    .reasons-cards
+      each item in items
+        .reasons-card
+          .reasons-card__img
+            img(src=item.img, alt="")
+          p.reasons-card__text=item.text
+    .reasons__show-more
+      | Показать все

@@ -1,0 +1,117 @@
+.callback
+  position: relative
+  width: 100%
+  padding: 80px 0
+  height: 356px
+  overflow: hidden
+  &::after
+    content: ''
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    background: linear-gradient(to left,rgba(#000, 1) 35%, rgba(#000, 0) 100%)
+    z-index: -1
+
+  img
+    position: absolute
+    display: block
+    width: 100%
+    height: auto
+    top: 0
+    left: 0
+    object-fit: cover
+    z-index: -1
+    +max-w(730)
+      height: 100%
+      width: auto
+
+  .container
+    display: flex
+    justify-content: flex-end
+    +max-w(730)
+      justify-content: center
+
+  +max-w(730)
+    padding: 55px 15px
+    height: auto
+
+.callback__subtitle
+  display: block
+  font-size: 16px
+  line-height: 20px
+  font-weight: 400
+  color: #fff
+  +max-w(480)
+    font-size: 14px
+    line-height: 18px
+
+.callback__title
+  padding-bottom: 30px
+  display: block
+  font-size: 54px
+  line-height: 60px
+  color: #fff
+  font-family: $font-family-lemon
+  +max-w(768)
+    font-size: 50px
+    line-height: 56px
+  +max-w(480)
+    font-size: 44px
+    line-height: 50px
+    text-align: left
+
+.callback__form
+  input
+    padding: 13px 14px 11px
+    min-height: 100%
+    color: #fff
+    background: transparent
+    border: none
+    border-bottom: 1px solid #fff
+    font-size: 14px
+    margin-right: 48px
+    transition: background .3s ease
+    &:focus
+      outline: none
+      background: rgba(#fff, 0.5)
+    &::placeholder
+      color: #fff
+    &:first-child
+      margin-right: 38px
+  +max-w(730)
+    display: flex
+    flex-direction: column
+    align-items: center
+    input
+      margin-right: 0
+      margin-bottom: 40px
+      width: 100%
+      &:first-child
+        margin-right: 0
+        margin-bottom: 15px
+
+.callback__submit
+  padding: 18px 51px
+  font-size: 14px
+  font-weight: 400
+  text-transform: uppercase
+  color: #ffffff
+  background: $color-orange
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  &:hover
+    background: rgba($color-orange, 0.8)
+  +max-w(730)
+    width: 100%
+
+.callback__policy
+  display: block
+  padding-top: 33px
+  font-size: 12px
+  font-weight: 400
+  color: rgba(#fff, 0.7)
+  +max-w(480)
+    text-align: left

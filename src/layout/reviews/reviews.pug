@@ -1,0 +1,13 @@
+include ../review/review
+include ../title/title
+
+- var clients = [{name: 'Надежда Наширбанова', avatar: 'images/avatar.png', time: '5 авг 2017 в 9:58', text: 'Спасибо за быструю доставку! Отличный поздний ужин после рабочего дня )', img: 'images/r-image.png', likes: '3', messages: '2', subscribes: '10'}, {name: 'Надежда Наширбанова', avatar: 'images/avatar.png', time: '5 авг 2017 в 9:58', text: 'Спасибо за быструю доставку! Отличный поздний ужин после рабочего дня )', img: 'images/r-image.png', likes: '0', messages: '2', subscribes: '0'}]
+
+.reviews
+  +title('Отзывы')
+  .container
+    .swiper-container.reviews-swiper-container
+      .swiper-wrapper
+        each client in clients
+          .swiper-slide.reviews-swiper-slide
+            +review(client)

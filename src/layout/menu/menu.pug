@@ -1,0 +1,44 @@
+include ../card/card
+include ../title/title
+
+- var sets = [{spec: 'hit',img: 'images/card1.png',title: 'Сет №10',size: '72 шт',weight: '1560', kalories: '1700', price: '2050'}, {spec: '',img: 'images/card2.png',title: 'Сет №8',size: '24 шт',weight: '960', kalories: '880', price: '1590'}, {spec: '',img: 'images/card3.png',title: 'Минисет №5',size: '14 шт',weight: '450', kalories: '400', price: '510'}, {spec: 'veg',img: 'images/card4.png',title: 'Сет №6',size: '16 шт',weight: '460', kalories: '490', price: '400'},{spec: 'hit',img: 'images/card1.png',title: 'Сет №10',size: '72 шт',weight: '1560', kalories: '1700', price: '2050'}, {spec: '',img: 'images/card2.png',title: 'Сет №8',size: '24 шт',weight: '960', kalories: '880', price: '1590'}, {spec: '',img: 'images/card3.png',title: 'Минисет №5',size: '14 шт',weight: '450', kalories: '400', price: '510'}, {spec: 'veg',img: 'images/card4.png',title: 'Сет №6',size: '16 шт',weight: '460', kalories: '490', price: '400'}]
+- var rolls = [{spec: '',img: 'images/roll1.png',title: 'Кунсей батакон',size: '8 шт',weight: '250', kalories: '350', price: '260'}, {spec: 'hot',img: 'images/roll2.png',title: 'Унаги диру',size: '8 шт',weight: '960', kalories: '800', price: '280'}, {spec: '',img: 'images/roll3.png',title: 'Филадельфия',size: '8 шт',weight: '450', kalories: '400', price: '280'}, {spec: 'hot',img: 'images/roll4.png',title: 'Мексиканский ',size: '8 шт',weight: '460', kalories: '490', price: '290'},{spec: '',img: 'images/roll1.png',title: 'Кунсей батакон',size: '8 шт',weight: '250', kalories: '350', price: '260'}, {spec: 'hot',img: 'images/roll2.png',title: 'Унаги диру',size: '8 шт',weight: '960', kalories: '800', price: '280'}, {spec: '',img: 'images/roll3.png',title: 'Филадельфия',size: '8 шт',weight: '450', kalories: '400', price: '280'}, {spec: 'hot',img: 'images/roll4.png',title: 'Мексиканский ',size: '8 шт',weight: '460', kalories: '490', price: '290'}]
+- var pizzas = [{spec: 'hit',img: 'images/pizza1.png',title: 'Баварская',size: '33 см',weight: '680', kalories: '1350', price: '480'}, {spec: 'veg',img: 'images/pizza2.png',title: 'Вегетарианская',size: '33 см',weight: '750', kalories: '1800', price: '380'}, {spec: 'hot',img: 'images/pizza3.png',title: 'Пепперони',size: '33 см',weight: '615', kalories: '1400', price: '450'}, {spec: '',img: 'images/pizza4.png',title: 'Классическая',size: '33 см',weight: '590', kalories: '1490', price: '390'},{spec: 'hit',img: 'images/pizza1.png',title: 'Баварская',size: '33 см',weight: '680', kalories: '1350', price: '480'}, {spec: 'veg',img: 'images/pizza2.png',title: 'Вегетарианская',size: '33 см',weight: '750', kalories: '1800', price: '380'}, {spec: 'hot',img: 'images/pizza3.png',title: 'Пепперони',size: '33 см',weight: '615', kalories: '1400', price: '450'}, {spec: '',img: 'images/pizza4.png',title: 'Классическая',size: '33 см',weight: '590', kalories: '1490', price: '390'}]
+- var woks = [{spec: 'hit',img: 'images/wok1.png',title: 'С говядиной',size: '',weight: '400', kalories: '1350', price: '430'}, {spec: '',img: 'images/wok2.png',title: 'С курицей',size: '',weight: '400', kalories: '1200', price: '290'}, {spec: 'hit',img: 'images/wok3.png',title: 'С морепродуктами',size: '',weight: '400', kalories: '1400', price: '430'}, {spec: 'veg',img: 'images/wok4.png',title: 'С овощами',size: '',weight: '400', kalories: '850', price: '430'},{spec: 'hit',img: 'images/wok1.png',title: 'С говядиной',size: '',weight: '400', kalories: '1350', price: '430'}, {spec: '',img: 'images/wok2.png',title: 'С курицей',size: '',weight: '400', kalories: '1200', price: '290'}, {spec: 'hit',img: 'images/wok3.png',title: 'С морепродуктами',size: '',weight: '400', kalories: '1400', price: '430'}, {spec: 'veg',img: 'images/wok4.png',title: 'С овощами',size: '',weight: '400', kalories: '850', price: '430'}]
+
+- var newItems = [{spec: '',img: 'images/roll1.png',title: 'Кунсей батакон',size: '8 шт',weight: '250', kalories: '350', price: '260'}, {spec: 'hot',img: 'images/roll2.png',title: 'Унаги диру',size: '8 шт',weight: '960', kalories: '800', price: '280'}, {spec: '',img: 'images/roll3.png',title: 'Филадельфия',size: '8 шт',weight: '450', kalories: '400', price: '280'}, {spec: 'hot',img: 'images/roll4.png',title: 'Мексиканский ',size: '8 шт',weight: '460', kalories: '490', price: '290'}, {spec: '',img: 'images/roll1.png',title: 'Кунсей батакон',size: '8 шт',weight: '250', kalories: '350', price: '260'}, {spec: 'hot',img: 'images/roll2.png',title: 'Унаги диру',size: '8 шт',weight: '960', kalories: '800', price: '280'}, {spec: '',img: 'images/roll3.png',title: 'Филадельфия',size: '8 шт',weight: '450', kalories: '400', price: '280'}]
+- var actions = [{spec: 'hit',img: 'images/pizza1.png',title: 'Баварская',size: '33 см',weight: '680', kalories: '1350', price: '480'}, {spec: 'veg',img: 'images/pizza2.png',title: 'Вегетарианская',size: '33 см',weight: '750', kalories: '1800', price: '380'}, {spec: 'hot',img: 'images/pizza3.png',title: 'Пепперони',size: '33 см',weight: '615', kalories: '1400', price: '450'}, {spec: '',img: 'images/pizza4.png',title: 'Классическая',size: '33 см',weight: '590', kalories: '1490', price: '390'}, {spec: 'hit',img: 'images/card1.png',title: 'Сет №10',size: '72 шт',weight: '1560', kalories: '1700', price: '2050'}, {spec: '',img: 'images/card2.png',title: 'Сет №8',size: '24 шт',weight: '960', kalories: '880', price: '1590'}, {spec: '',img: 'images/card3.png',title: 'Минисет №5',size: '14 шт',weight: '450', kalories: '400', price: '510'}, {spec: 'veg',img: 'images/card4.png',title: 'Сет №6',size: '16 шт',weight: '460', kalories: '490', price: '400'}]
+
+- var data = [{menuTitle: 'Сеты', list: sets},{menuTitle: 'Роллы', list: rolls}, {menuTitle: 'Пицца', list: pizzas}, {menuTitle: 'WOK', list: woks}]
+
+mixin menu(menuTitle, items)
+  .menu
+    .container
+      if menuTitle
+        +title(menuTitle)
+      else
+      .swiper-container.menu-swiper-container
+        .swiper-wrapper
+          each item in items
+            +card(item, menuTitle)
+        .menu__pagination
+          .menu__pagination-btn.menu__pagination-btn--prev
+            img(src="images/arrow.png" alt="")
+          .menu__pagination-dots.swiper-pagination
+          .menu__pagination-btn.menu__pagination-btn--next
+            img(src="images/arrow.png" alt="")
+
+each item in data
+  +menu(item.menuTitle, item.list)
+
+.menu-specials
+  .container
+    .menu-specials__tabs
+      .menu-specials__item.menu-specials__item-new.menu-specials__item--active
+        | Новинки
+      .menu-specials__item.menu-specials__item-action
+        | Акции
+  .menu-specials__block
+    +menu('', newItems)
+  //- .menu-specials__block
+  //-   +menu('', actions)

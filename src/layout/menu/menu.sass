@@ -1,0 +1,102 @@
+.menu
+  padding: 40px 0 0px
+  .container
+    +max-w(560)
+      padding: 0
+
+.menu-swiper-container
+  padding: 25px 0
+  &::after, &::before
+    position: absolute
+    content: ''
+    display: none
+    top: 0
+    height: 100%
+    width: 140px
+    z-index: 2
+    +max-w(560)
+      display: block
+    +max-w(400)
+      width: 50px
+  &::after
+    right: 0
+    background: linear-gradient(to left,rgba(#fff, .6) 35%, rgba(#fff, 0) 100%)
+  &::before
+    left: 0
+    background: linear-gradient(to right,rgba(#fff, .6) 35%, rgba(#fff, 0) 100%)
+  +max-w(560)
+    padding: 25px 50px 0
+
+
+.menu-swiper-slide
+  min-height: 100%
+  height: auto
+
+.menu__pagination
+  display: flex
+  align-items: center
+  height: auto
+  width: fit-content
+  padding: 20px 0
+  margin: 0 auto
+  +max-w(768)
+    display: none
+
+  .menu__pagination-dots
+    position: static
+    display: flex
+    align-items: center
+    padding: 20px
+    .swiper-pagination-bullet
+      margin: 0 10px
+
+    .swiper-pagination-bullet-active
+      background: $color-olivegreen
+
+  .menu__pagination-btn
+    cursor: pointer
+    img
+      display: block
+      height: 100%
+      width: auto
+      object-fit: cover
+
+  .swiper-button-disabled
+    opacity: 0.5
+
+  .menu__pagination-btn--prev
+    transform: rotate(180deg)
+
+
+.menu-specials
+  display: block
+  width: 100%
+  height: auto
+  padding: 140px 0 120px
+  background: url('./bg-spicials.png') 50% 50% no-repeat
+  background-size: cover
+  +max-w(768)
+    padding: 40px 0
+
+.menu-specials__tabs
+  display: flex
+  justify-content: space-between
+  width: 200px
+
+.menu-specials__item
+  font-size: 18px
+  font-weight: 600
+  line-height: 24px
+  color: #999999
+  cursor: pointer
+  &:hover
+    color: rgba($color-orange, 0.5)
+  &--active
+    color: $color-orange
+    &:hover
+      color: $color-orange
+
+.menu-specials__block
+  display: block
+  .menu
+    padding: 0

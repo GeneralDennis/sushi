@@ -1,0 +1,244 @@
+.card
+  display: flex
+  flex-direction: column
+  justify-content: stretch
+  width: 263px
+  min-height: 100%
+  border-radius: 10px
+  box-shadow: 0 4px 29px rgba(0, 0, 0, 0.08)
+  background: #fff
+  overflow: hidden
+  +max-w(1180)
+    width: auto
+
+.card__top
+  position: relative
+  min-height: 226px
+  height: auto
+
+.card__img
+  display: block
+  position: relative
+  z-index: 1
+  height: 100%
+  width: 100%
+  object-fit: contain
+
+.card__spec
+  position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
+  top: 14px
+  right: 14px
+  width: 54px
+  height: 54px
+  border-radius: 50%
+  z-index: 2
+  img
+    display: none
+
+  &--hot
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.39)
+    background-image: linear-gradient(to top, #d44434 0%, #f75b49 100%)
+    img
+      display: block
+      width: 25px
+      height: 35px
+      object-fit: cover
+
+  &--hit
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.39)
+    background-image: linear-gradient(to top, #d44434 0%, #f75b49 100%)
+
+    .card__spec-text--hit
+      display: block
+
+  &--veg
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.39)
+    background-image: linear-gradient(to top, #196c00 0%, #58a506 100%)
+
+    .card__spec-text--veg
+      display: block
+
+.card__spec-text
+  display: none
+  font-size: 16px
+  font-weight: 700
+  font-family: $font-family-robotoslab
+  color: #fff
+
+.card__content
+  flex-grow: 1
+  flex-shrink: 1
+  flex-basis: auto
+  padding: 0 35px 38px
+  +max-w(400)
+    padding: 0 15px 34px
+
+.card__title
+  padding: 19px 0 23px
+  font-size: 20px
+  font-weight: 700
+  line-height: 28px
+  text-align: center
+
+.card__description
+  font-size: 12px
+  font-weight: 300
+  line-height: 20px
+  text-align: center
+
+.card__description-size
+  padding-right: 5px
+  border-right: 1px solid #000000
+
+.card__description-weight
+  padding: 0 5px
+
+.card__description-kalories
+  padding-left: 5px
+  border-left: 1px solid #000
+
+.card__props
+  display: flex
+  justify-content: space-between
+  width: 100%
+  padding: 26px 5px 29px
+
+.card__price
+  font-size: 22px
+  line-height: 28px
+  font-weight: 700
+  font-family: $font-family-robotoslab
+  span
+    padding-left: 8px
+    vertical-align: top
+    font-size: 14px
+    line-height: 16px
+
+.quantitier
+  display: flex
+  justify-content: space-between
+  align-items: center
+  input
+    display: none
+
+.quantitier-minus, .quantitier-plus
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 13px
+  width: 13px
+  border-radius: 50%
+  color: #808080
+  border: 1px solid #808080
+  cursor: pointer
+  &:hover
+    color: $color-green
+
+.quantitier-minus
+  span
+    display: block
+    width: 5px
+    height: 1px
+    background: #808080
+  &:hover
+    span
+      background: $color-orange
+
+.quantitier-show
+  font-size: 14px
+  line-height: 28px
+  text-align: center
+  font-weight: 400
+  padding: 0 15px
+
+.card__add
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  height: auto
+  padding: 11px 30px
+  border-radius: 5px
+  background: $color-orange
+  color: #fff
+  text-transform: uppercase
+  cursor: pointer
+  transition: box-shadow .3s
+  img
+    display: block
+    height: 22px
+    width: auto
+    object-fit: cover
+
+  &--hide
+    display: none
+  &:hover
+    box-shadow: 0 0 1px 1px rgba($color-orange, .8)
+
+.card__added
+  background: $color-green
+
+
+.card-sauce
+  padding: 10px 0
+
+.card-sauce__controls
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+.card-sauce__controls-count
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 5px
+  margin-left: 10px
+  font-size: 12px
+  font-weight: 300
+  background: #f2f2f2
+
+  &::after
+    display: block
+    content: ''
+    margin-left: 10px
+    width: 7px
+    height: 12px
+    background: url('./cross.png') 50% 60% no-repeat
+    cursor: pointer
+    &:hover
+      opacity: 0.5
+
+
+.card-sauce__controls-block
+  display: flex
+  align-items: center
+
+.card-sauce__controls-total
+  font-size: 12px
+  color: #000000
+  padding: 0 10px
+
+.card-sauce__controls-add
+  position: relative
+  height: 19px
+  width: 19px
+  background: $color-orange
+  span
+    position: absolute
+    top: 50%
+    left: 5px
+    height: 2px
+    width: 9px
+    background: #ffffff
+    transform: translateY(-50%)
+    color: #fff
+    &:nth-child(2)
+      height: 9px
+      width: 2px
+      top: 5px
+      left: 50%
+      transform: translateX(-50%)
+

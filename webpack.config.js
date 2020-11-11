@@ -24,7 +24,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
  */
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 const SERVER_HOST = 'localhost';
-const SERVER_PORT = 3000;
+const SERVER_PORT = 3002;
 
 /**
  * Webpack config variables

@@ -1,1 +1,75 @@
-header.header HEADER
+header.header
+  .header__burger
+      span
+      span
+      span
+  .header__buyers
+    .header__buyers-avt
+      img(src="images/user.png", alt="")
+    .header__buyers-cart
+      img(src="images/cart.png", alt="")
+  .header__content
+    .container.header__container
+      a(href="/").header__logo
+        img(src="images/miushi_logo.png", alt="")
+      .header__details
+        a(href="#").header__details-address
+          |  г. Курск, ул. Ленина, д. 3
+        a(href="mailto: mail@mail.ru").header__details-mail
+          | 78003332222@yandex.ru
+        .header__details-contacts
+          a(href="tel: +7 (800) 333 2 222").header__details-phone
+            | +7 (800) 333 2 222
+          span.header__details-work
+            | Работаем с 11.00 до 23.00
+      a(href="tel: +7 (800) 333 2 222").header__callback-btn
+        span Обратный звонок
+        img(src="images/phone-tube.svg", alt="")
+
+  .container
+    ul.header-menu
+      li.header-menu__item.js-open-dropmenu
+        | Меню
+      li.header-menu__item
+        | Акции и скидки
+      li.header-menu__item
+        | Доставка и оплата
+      li.header-menu__item
+        | Новости
+      li.header-menu__item
+        | Контакты
+      li.header-menu__item.header-menu__item--cabinet
+        span Кабинет
+        img(src="images/user.png", alt="")
+      li.header-menu__item.header-menu__cart
+        span Корзина
+        .header-menu__cart-img
+          img(src="images/cart.png", alt="")
+          .header-menu__cart-count
+            | 12
+  .container.container--drop-menu
+    ul.header-drop__menu
+      li.header-drop__item
+        | Суши
+      li.header-drop__item
+        | Гунканы
+      li.header-drop__item
+        | Инари
+      li.header-drop__item
+        | Супы
+      li.header-drop__item
+        | Салаты
+      li.header-drop__item
+        | Горячие закуски
+      li.header-drop__item
+        | Десерты
+      li.header-drop__item
+        | Напитки
+      li.header-drop__item
+        | Дополительно
+      li.header-drop__item
+        | Сеты
+      li.header-drop__item
+        | Роллы
+      li.header-drop__item
+        | Роллы
